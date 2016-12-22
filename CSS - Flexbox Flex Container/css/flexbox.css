@@ -1,0 +1,15 @@
+/* ================================= 
+  Flexbox
+==================================== */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.item {
+  flex: 1 200px;
+}
+
