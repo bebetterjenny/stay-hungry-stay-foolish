@@ -1,0 +1,14 @@
+/* ================================= 
+  Flexbox
+==================================== */
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+  height: 450px;
+}
+
+.item {	
+	flex: 1;
+}
+
