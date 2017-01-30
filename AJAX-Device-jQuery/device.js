@@ -2,6 +2,7 @@ $(document).ready(function() {
 	
 
 	$.ajax({
+		crossOrigin: true,
 		url: "DeviceSample.xml",
 		crossDomain: true,
 		dataType: 'xml',
@@ -80,7 +81,7 @@ $(document).ready(function() {
 								info += ": " + prop.getAttributeNode("value").nodeValue;
 							}
 							
-							$('#prop p').append(info + "; ");
+							$('#prop').html(info + "; ");
 						})
 						//$('#prop p').append(property + "; ");
 					}
