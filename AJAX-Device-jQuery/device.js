@@ -59,6 +59,7 @@ $(document).ready(function() {
 			
 			//Enable searching
 			$('form').submit(function(evt) {
+				$('#prop').empty();
 				evt.preventDefault();
 				var $selectField = $('form select');
 				var $searchButton = $('form button');
@@ -67,7 +68,9 @@ $(document).ready(function() {
 				$searchButton.attr("disabled", true).text("Searching....");
 				
 				manuSelect = $('#selectManufacturer option:selected').text();
+				console.log(manuSelect);
 				modelSelect = $('#selectModel option:selected').text();
+				console.log(modelSelect);
 				var j = 0;
 				$.each(manufacturers, function(i, manufacturer) {
 					manuText[i] = manufacturer.childNodes[0].nodeValue;
@@ -81,7 +84,7 @@ $(document).ready(function() {
 								info += ": " + prop.getAttributeNode("value").nodeValue;
 							}
 							
-							$('#prop').html(info + "; ");
+							$('#prop').append(info + "; ");
 						})
 						//$('#prop p').append(property + "; ");
 					}
